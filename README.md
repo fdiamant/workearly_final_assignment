@@ -18,6 +18,6 @@
 ### Step 2, python
 
 Find the most popular item sold based on zip code and percentage of sales per store.    
-See the [liquor_sale.py]()
+See the [liquor_sale.py](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.py) for details.
 
 
