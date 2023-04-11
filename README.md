@@ -13,6 +13,6 @@
 
 - Execute the provided [finance_liquor_sales.sql](https://github.com/Workearly/Final-Assignment/blob/main/finance_liquor_sales.sql) in MySQL Workbench to create the necesseary schema.
 - Execute the [sql_query.sql](https://github.com/fdiamant/workearly_final_assignment/blob/main/sql_query.sql) to retrieve all columns between 2016 and 2019
-- Export the results 
+- Export the results in a csv file. [liquor_sales.csv](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.csv)
 
 
