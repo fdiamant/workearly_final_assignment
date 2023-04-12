@@ -1,6 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.cbook as cbook
 
 # set this option to display all columns in PyCharm console
 # See https://pandas.pydata.org/docs/user_guide/options.html
@@ -42,19 +41,17 @@ print('The most popular items per zip code are:\n', popular_items)
 print('The sales per store are:\n', sales_percentage)
 
 # Create the scatter plot
-# Convert to dataframe and reset index
-popular_items_df = popular_items.reset_index()
 
-# Convert item_description to categorical variable
-popular_items_df['item_description'] = popular_items_df['item_description'].astype('category')
+fig, ax = plt.subplots()
+for cat, d in df.groupby('bottles_sold'):
+    ax.scatter(x=d['zip_code'],y=d['bottles_sold'], s=d['bottles_sold'] )
 
-# Create scatter plot
-plt.scatter(popular_items_df['zip_code'], popular_items_df['bottles_sold'], c= 'blue', cmap='virids')
 
 # Add labels and title
 plt.xlabel('Zip Code')
 plt.ylabel('Bottles Sold')
 plt.title('Sales by Zip Code')
+plt.ylim((0,2000))
 
 # Show plot
 plt.show()
