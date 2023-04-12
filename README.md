@@ -22,7 +22,3 @@
 After calculating the percentage of missing values per column, it becomes evident that a significant portion of the missing value data is observed in the store_location column (12.16%) and the category_name column (8.11%). However, as the significant columns here are not category_name and store_location, it is not necessary to drop the indexes with missing values.
 
 See the [liquor_sale.py](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.py) for details.
-
-
-<iframe src="https://public.tableau.com/views/WorkearlyAssignment_16812725658960/Salesdashboard?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link"
- width="645" height="955"></iframe>

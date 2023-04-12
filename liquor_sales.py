@@ -24,12 +24,16 @@ missing_percentages = round((df.isna().mean() * 100), 2)
 # as the significant columns here are not category_name and store_location, it is not necessary to drop the indexes
 # with missing values.
 
+# Aggregate by zip code and item description and calculate the total number of bottles sold.
 popular_items = df.groupby(['zip_code','item_description'])['bottles_sold'].sum()
+# Sort by zip code and item description
 popular_items = popular_items.sort_index(level=['zip_code', 'item_description'])
 
-
+# Aggregate by store number and name. Calculate the total sales per store in dollars.
 sales_per_store = df.groupby(['store_number', 'store_name'])['sale_dollars'].sum()
+# Calculate the total sales in dollars.
 total_sales = df['sale_dollars'].sum()
+# Calculate the sales percentage per store and sort by descending value.
 sales_percentage = round(100*sales_per_store/total_sales,2)
 sales_percentage = sales_percentage.sort_values(ascending=False)
 
