@@ -36,7 +36,7 @@ total_sales = df['sale_dollars'].sum()
 # Calculate the sales percentage per store and sort by descending value.
 sales_percentage = round(100*sales_per_store/total_sales,2)
 sales_percentage = sales_percentage.sort_values(ascending=False)
-
+# Print the results
 print('The most popular items per zip code are:\n', popular_items)
 print('The sales per store are:\n', sales_percentage)
 
