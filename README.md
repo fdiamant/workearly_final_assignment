@@ -24,3 +24,5 @@ After calculating the percentage of missing values per column, it becomes eviden
 See the [liquor_sale.py](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.py) for details.
 
 
+<iframe src="https://public.tableau.com/views/WorkearlyAssignment_16812725658960/Salesdashboard?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link"
+ width="645" height="955"></iframe>

@@ -27,6 +27,7 @@ missing_percentages = round((df.isna().mean() * 100), 2)
 popular_items = df.groupby(['zip_code','item_description'])['bottles_sold'].sum()
 popular_items = popular_items.sort_index(level=['zip_code', 'item_description'])
 
+
 sales_per_store = df.groupby(['store_number', 'store_name'])['sale_dollars'].sum()
 total_sales = df['sale_dollars'].sum()
 sales_percentage = round(100*sales_per_store/total_sales,2)
