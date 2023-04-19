@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -42,16 +43,22 @@ print('The sales per store are:\n', sales_percentage)
 
 # Create the scatter plot
 
-fig, ax = plt.subplots()
-for cat, d in df.groupby('bottles_sold'):
-    ax.scatter(x=d['zip_code'],y=d['bottles_sold'], s=d['bottles_sold'] )
+# Define the x and y variables
+x = popular_items.index.get_level_values('zip_code')
+y = popular_items.values
 
+# Define the colors for each item description
+unique_items = df['item_description'].unique()
+colors = plt.cm.gnuplot2(np.linspace(0, 1, len(unique_items)))
+colormap = dict(zip(unique_items, colors))
+
+# Create the scatter plot
+plt.scatter(x, y, c=[colormap[item] for item in popular_items.index.get_level_values('item_description')])
 
 # Add labels and title
 plt.xlabel('Zip Code')
-plt.ylabel('Bottles Sold')
-plt.title('Sales by Zip Code')
-plt.ylim((0,2000))
+plt.ylabel('Total Bottles Sold')
+plt.title('Most Popular Items by Zip Code')
 
-# Show plot
+# Show the plot
 plt.show()
