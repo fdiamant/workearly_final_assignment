@@ -18,8 +18,8 @@ missing = df[df.isna().any(axis=1)]
 # calculate percentage of missing values per column
 missing_percentages = round((df.isna().mean() * 100), 2)
 # Print the results
-# print('Rows with missing or null values:\n', missing)
-# print('Percentage of missing values per column:\n', missing_percentages)
+print('Rows with missing or null values:\n', missing)
+print('Percentage of missing values per column:\n', missing_percentages)
 # After calculating the percentage of missing values per column, it becomes evident that a significant portion of the
 # missing value data is observed in the store_location column (12.16%) and the category_name column (8.11%). However,
 # as the significant columns here are not category_name and store_location, it is not necessary to drop the indexes

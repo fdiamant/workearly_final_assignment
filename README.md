@@ -21,4 +21,8 @@
 
 After calculating the percentage of missing values per column, it becomes evident that a significant portion of the missing value data is observed in the store_location column (12.16%) and the category_name column (8.11%). However, as the significant columns here are not category_name and store_location, it is not necessary to drop the indexes with missing values.
 
-See the [liquor_sale.py](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.py) for details.
+### Scatter plot creation
+
+Using the aggregated data from the CSV file, we set the zip_code column as the values for the x-axis and the sum of bottles sold column as the values for the y-axis. Then, we create a colormap based on the gnuplot2 colorspace of the matplotlib library for each unique item_description.
+
+For details, see the [liquor_sale.py](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.py)
