@@ -23,6 +23,13 @@ After calculating the percentage of missing values per column, it becomes eviden
 
 ### Scatter plot creation
 
-Using the aggregated data from the CSV file, we set the zip_code column as the values for the x-axis and the sum of bottles sold column as the values for the y-axis. Then, we create a colormap based on the gnuplot2 colorspace of the matplotlib library for each unique item_description.
+After aggregating the data in the CSV file, I assigned the zip_code column as the values for the x-axis and the sum of bottles sold column as the values for the y-axis. Subsequently, I generated a colormap for each unique item_description based on the gnuplot2 colorspace of the matplotlib library.
 
 For details, see the [liquor_sale.py](https://github.com/fdiamant/workearly_final_assignment/blob/main/liquor_sales.py)
+
+## Step 3, Tableau
+
+The CSV file generated in the previous step was utilized to create visualizations in Tableau.
+
+[Dashboard on Tableau Public](https://public.tableau.com/views/WorkearlyAssignment_16812725658960/Salesdashboard?:language=en-GB&:display_count=n&:origin=viz_share_link)    
+[Dashboard screenshot](https://github.com/fdiamant/workearly_final_assignment/blob/main/Sales%20dashboard.png)
